@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Table} from 'antd';
+import { Table } from 'antd';
 import uuid from 'uuid';
 
 
 const { Column } = Table;
 
-const data = [{
+ var data = [{
   key: uuid.v4(),
   title: 'Product Change Website',
   network: 'POP',
@@ -20,8 +20,7 @@ const data = [{
   title: 'Ecommerce Shopping Cart',
   network: 'ORD',
   system: 'Bumblebee'
-}];
-
+}]
 
   class table extends Component {
     

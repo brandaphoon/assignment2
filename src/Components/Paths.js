@@ -11,10 +11,10 @@ const paths = () => (
   <main>
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route exact path='/Dashboard' component={Dashboard}/>
-      <Route exact path='/Create' component={Form}/>
-      <Route exact path='/Assign' component={Assign}/>
-      <Route exact path='/table' component={table}/>
+      <Route  path='/Dashboard' component={Dashboard}/>
+      <Route  path='/Create' component={Form}/>
+      <Route  path='/Assign' component={Assign}/>
+      <Route  path='/table' component={table}/>
     </Switch>
   </main>
 )

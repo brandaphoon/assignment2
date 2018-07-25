@@ -5,21 +5,26 @@ import './Forms.css'
 
 
 const FormItem = Form.Item;
-//const Option = Select.Option;
 
 class form1 extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+        title: 'title',
+        network: '',
+        system:''
+    }
 
+}
   static defaultProps = { //these are the default options in the dropbox
     networkcategories: ['POP','ORD', 'OCS'],
     systemcategories:['Optimus','Prime','Bumblebee']
 }
 
-
   state = {
     redirect: false
   }
-
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -27,18 +32,16 @@ class form1 extends Component {
       if (!err) {
         console.log('Received values of form: ', values)
         this.setState({ redirect: true });
-
-
       }
     });
   }
-
 
   render() {
 
     let networkOptions = this.props.networkcategories.map(network => { //mapping the network data 
       return <option key={network} value={network}>{network}</option> //creating the option box 
   })
+
   let systemOptions = this.props.systemcategories.map(system => { //mapping the network data 
       return <option key={system} value={system}>{system}</option> //creating the option box 
   })
@@ -61,7 +64,6 @@ class form1 extends Component {
             <Row>
               <FormItem
               label="Request Title"
-              value={this.state.title}
               labelCol={{ span: 5 }}
               wrapperCol={{ span: 12 }}
               >
@@ -76,8 +78,7 @@ class form1 extends Component {
             <Row>
               <Col span={10}>    
                 <FormItem
-                  label="Network"
-                  value={this.state.network}
+                  label="Network"              
                   labelCol={{ span: 5 }}
                   wrapperCol={{ span: 12 }}
                 >
@@ -96,7 +97,6 @@ class form1 extends Component {
               <Col span={10}>
                 <FormItem
                   label="System"
-                  value={this.state.system}
                   labelCol={{ span: 5 }}
                   wrapperCol={{ span: 12 }}
                 >
