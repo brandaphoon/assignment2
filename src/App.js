@@ -3,10 +3,7 @@ import 'antd/dist/antd.css';
 import './App.css';
 import { Row, Col } from 'antd';
 import Menu from './Components/Menu';
-//import Forms from './Components/Forms';
-//import Form from './Components/Form';
 import Paths from './Components/Paths';
-//import Table from './Components/Table';
 //import uuid from 'uuid';
 
 

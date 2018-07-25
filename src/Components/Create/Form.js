@@ -1,7 +1,6 @@
 import { Form, Select, Input, Button, Row, Col } from 'antd';
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
-import uuid from 'uuid';
 import './Forms.css'
 
 
@@ -20,7 +19,6 @@ class form1 extends Component {
   state = {
     redirect: false
   }
-
 
 
   handleSubmit = (event) => {
